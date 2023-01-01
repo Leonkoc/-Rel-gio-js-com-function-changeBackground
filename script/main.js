@@ -18,13 +18,15 @@ const relogio = setInterval(function time() {
     
     changeBackground()
 });
-
+console.log(`Horário atual: ${currentTime}`)
 function changeBackground () {
     let currentTime = new Date().getHours();
-    if(currentTime > 18 || currentTime < 6){
+    if(currentTime >= 18 || currentTime < 6){
+        console.log("Mudando o plano de fundo noite")
         document.body.style.backgroundImage = "url('./assets/noite.gif')"
     }else{
-        document.body.style.backgroundImage = "url('dia.gif')"
+        console.log("Mudando plano de fundo para dia")
+        document.body.style.backgroundImage = "url('./assets/dia.gif')"
     }
     document.body.style.backgroundSize = "cover";
 }
