@@ -21,7 +21,7 @@ const relogio = setInterval(function time() {
 
 function changeBackground () {
     let currentTime = new Date().getHours();
-    if(currentTime > 18 && currentTime < 6){
+    if(currentTime > 18 || currentTime < 6){
         document.body.style.backgroundImage = "url('./assets/noite.gif')"
     }else{
         document.body.style.backgroundImage = "url('dia.gif')"
